@@ -22,19 +22,26 @@ import numpy as np
 import matplotlib.pyplot as plt
 import csv
 
-class NotPositveError(Exception):
+class NotPositiveError(Exception):
     """
-    This is a custom error class if the inputed data is not positive.
+    Custom error class raised when the inputed data is not positive.
     """
-    def __init__(self, message = "Number is not positive."):
+    def __init__(self, message="Number is not positive."):
         self.message = message
 
-def generateSquareWave(amplitude:float, frequency:float, sampling_rate:float, duration=1.0):
+def generateSquareWave(amplitude: float, frequency: float, sampling_rate: float, duration=1.0):
     """
-    This generates a square wave based on the given amplitude, frequency, sampling rate, and duration.
-    The duration of the square wave is 1s.
+    Generates a square wave based on the given amplitude, frequency, sampling rate, and duration.
+    
+    Parameters:
+    amplitude (float): The amplitude of the square wave.
+    frequency (float): The frequency of the square wave.
+    sampling_rate (float): The sampling rate of the square wave.
+    duration (float, optional): The duration of the square wave in seconds. Defaults to 1.0.
+    
+    Returns:
+    tuple: A tuple containing the time array and the square wave array.
     """
-     
     # Calculate the time array
     t = np.linspace(0, duration, int(sampling_rate * duration), endpoint=False)
     
@@ -49,41 +56,53 @@ def generateSquareWave(amplitude:float, frequency:float, sampling_rate:float, du
     
     return t, square_wave
 
-def getNumber(message:str, isPositive = False):
+def getNumber(message: str, isPositive=False):
     """
-    This method returns a number given by the user. 
-    The message parameter is printed to the user.
-    If you want the number to be positive, set the isPositive parameter to true.
+    Returns a number provided by the user.
+    
+    Parameters:
+    message (str): The message to be displayed when prompting the user for input.
+    isPositive (bool, optional): If True, only positive numbers are accepted. Defaults to False.
+    
+    Returns:
+    float: The number provided by the user.
     """
-    while(True):
+    while True:
         try:
             x = input(message)
             x = float(x)
 
-            if(not (isPositive and x <= 0)):
+            if not (isPositive and x <= 0):
                 return x
             else:
-                raise NotPositveError()
+                raise NotPositiveError()
         except ValueError:
             print("Please enter a number.")
-        except NotPositveError:
+        except NotPositiveError:
             print("Please enter a positive number.")
 
 def formatValues(values):
     """
-    Format values with appropriate unit based on their magnitudes.
+    Formats values with appropriate units based on their magnitudes.
+    
+    Parameters:
+    values (list of float): The values to be formatted.
+    
+    Returns:
+    tuple: A tuple containing the formatted values and the appropriate unit.
     """
     magnitude = max(abs(value) for value in values)
-    units = ['T', 'G', 'M', 'k','', 'm', 'μ', 'n', 'p']
+    units = ['T', 'G', 'M', 'k', '', 'm', 'μ', 'n', 'p']
     threshold_values = [1e12, 1e9, 1e6, 1e3, 1, 1e-3, 1e-6, 1e-9, 1e-12]
     for i, threshold in enumerate(threshold_values):
         if magnitude >= threshold:
             return (['{:.3f}'.format(value / threshold) for value in values], units[i])
     return (['{:.3f}'.format(value) for value in values], "")
 
+
 def printWelcomeMessage():
     """
-    This function printss the welcome message,
+    This function prints the welcome message.
     """
     print("\n\n\n")
     print("\033[91mThis program generates a square wave on matplotlib based on the amplitude, frequency, and sampling rate entered by you.\033[0m")

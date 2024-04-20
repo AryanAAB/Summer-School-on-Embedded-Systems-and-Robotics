@@ -105,7 +105,7 @@ def demodulateSignal(modulatedSignal, windowSize=13):
 
 def printWelcomeMessage():
     """
-    This function printss the welcome message,
+    This function prints the welcome message.
     """
     print("\n\n\n")
     print("\033[91mThis program generates a digital signal, modulates it onto a carrier wave, adds noise to it, and then demodulates it.\033[0m")
