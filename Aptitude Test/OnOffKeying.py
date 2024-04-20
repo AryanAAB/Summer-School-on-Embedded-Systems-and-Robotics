@@ -1,7 +1,7 @@
 """
 OnOffKeying.py
 
-This program generates a square wave, mmodulates it onto a carrier wave, 
+This program generates a square wave, modulates it onto a carrier wave, 
 demodulates the signal, and prints the demodulated signal.
 
 Usage:
@@ -24,10 +24,10 @@ from scipy.signal import medfilt
 
 def generateSignal(frequency=2, duration=1, sampling_rate=1000):
     """
-    Function to generate a square wave signal.
+    Function to generate a digital signal.
 
     Args:
-        frequency (float): Frequency of the square wave.
+        frequency (float): Frequency of the digital signal.
         duration (float): Duration of the signal in seconds.
         sampling_rate (int): Sampling rate in Hz.
 
@@ -42,11 +42,11 @@ def generateSignal(frequency=2, duration=1, sampling_rate=1000):
 
 def modulateSignal(t, square, carrier_frequency=10):
     """
-    Function to modulate the square wave signal with a carrier wave.
+    Function to modulate the digital signal with a carrier wave.
 
     Args:
         t (numpy.ndarray): Time array.
-        square (numpy.ndarray): Square wave signal.
+        square (numpy.ndarray): digital signal.
         carrier_frequency (float): Frequency of the carrier wave.
 
     Returns:
@@ -75,7 +75,7 @@ def addNoise(modulated_signal, noise_amplitude=0.05):
 
     return noise, noisy_signal
 
-def demodulateSignal(modulatedSignal, windowSize=11):
+def demodulateSignal(modulatedSignal, windowSize=13):
     """
     Function to demodulate the modulated signal.
 
@@ -103,13 +103,24 @@ def demodulateSignal(modulatedSignal, windowSize=11):
     
     return smoothed_signal
 
+def printWelcomeMessage():
+    """
+    This function printss the welcome message,
+    """
+    print("\n\n\n")
+    print("\033[91mThis program generates a digital signal, modulates it onto a carrier wave, adds noise to it, and then demodulates it.\033[0m")
+    print("\033[94mAfter that, the digital signal, carrier wave, the noise, the modulated signal, and the demodulated signal are shown using matplotlib.\033[0m")
+    print("\n\n\n")
+
 if __name__ == "__main__":
+    printWelcomeMessage()
+
     t, square = generateSignal()
     carrier_wave, modulatedSignal = modulateSignal(t, square)
     noise, modulatedSignal = addNoise(modulatedSignal)
     demodulatedSignal = demodulateSignal(modulatedSignal)
 
-    fig, axes = plt.subplots(nrows = 5, ncols = 1, figsize = (10, 8))
+    fig, axes = plt.subplots(nrows = 5, ncols = 1, figsize = (10, 8), num = "On Off Keying")
     axes[0].plot(t, square, color = "blue")
     axes[0].set_title("Original Data", color = "blue")
     axes[1].plot(t, carrier_wave, color = "green")

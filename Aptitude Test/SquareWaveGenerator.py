@@ -104,11 +104,13 @@ if(__name__ == "__main__"):
     t, square_wave = generateSquareWave(amplitude, frequency, sampling_rate)
 
     # Plot the square wave
+    plt.figure("Square Wave Generator")
     plt.plot(t, square_wave)
     plt.title('Square Wave (Sampling Rate: {} Hz)'.format(sampling_rate))
     plt.xlabel('Time (s)')
     plt.ylabel('Amplitude (V)')
     plt.grid(True)
+
     plt.show()
 
     # Format the time and amplitude values
