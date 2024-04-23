@@ -83,7 +83,7 @@ python3 SquareWaveGenerator.py
 ADC.py mimics the analog to digital converter calculator by taking in the number of bits in ADC, the analog voltage input to ADC, and the reference voltage to ADC and outputting the numeric digital output and binary digital output. In other words, it takes a voltage or current input and converts it into a digital representation that can be processed by digital systems like microcontrollers, computers, or digital signal processors. 
 
 ### Snippets of Important Sections
-The below code gets the user data
+The below code gets the user data.
 ```python
 def getInteger(message: str):
     """
