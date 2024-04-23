@@ -23,10 +23,10 @@ The package I created was “aryan-basic-math-operations” using PyPI. This pac
 
 ### Installation
 To install the package run the following command: 
-  • pip install aryan-basic-math-operations
+  * pip install aryan-basic-math-operations
 To use the package run the following command:
-  •	from basic_math_operations import *
-  •	After that, you can call the different methods available such as add, subtract, multiply, and others as shown below. 
+  *	from basic_math_operations import *
+  *	After that, you can call the different methods available such as add, subtract, multiply, and others as shown below. 
 
 ### Running the Code
 python3 Math.py
@@ -54,11 +54,11 @@ While most materials follow Ohm’s Law and the above conditions under normal co
 **Objective:** The objective of this experiment is to investigate Ohm’s Law by measuring the relationship between current (I) and resistance (R) when connected to a fixed voltage source of 5V. 
 **Hypothesis:** Increasing the resistance of the resistor will result in a decrease in the current flowing through it when voltage is kept constant, because the higher resistance values would impede the flow of current. 
 **Materials:**
-  •	Various resistors of different resistance values
-  •	DC power supply suppy such as a battery
-  •	Connecting Wires
-  •	Multimeter to measure voltage, current, and resistance
-  •	Breadboard
+  *	Various resistors of different resistance values
+  *	DC power supply suppy such as a battery
+  *	Connecting Wires
+  *	Multimeter to measure voltage, current, and resistance
+  *	Breadboard
 **Procedure:**
   1.	Connect the DC power supply to the breadboard.
   2.	Chose a resistor and measure its resistance using a Ohmeter or Multimeter.
@@ -81,10 +81,10 @@ Through the experiment, it is evident that the current through a resistor, denot
 ### Importance of Modulating a Signal with a Carrier in Communication Systems
 Modulation is a process by which data is converted into waves by using a carrier signal, whereas demodulation is a process by which the received waves are converted back into useful data. A carrier signal does not contain any information but posesses a unique phase, frequency, or amplitude upon which the data is superimposed. There are three types of modulation: frequency modulation, phase modulation, and amplitude modulation. In frequency modulation, the frequency of the carrier wave is varied; in phase modulation, the phase of the carrier signal is modified; and in amplitude modulation, the amplitude of the carrier signal represents the data. An example of amplitude modulation is On-Off Keying Modulation in which if the transmitter goes to IDLE state, then the transmission is logic 0; otherwise, the transmission is logic 1. 
 Modulation is important because of the following reasons:
-  • **Efficient Data Transmission:** Transmitting a signal over a link often results in significant signal degradation due to attentuation, distortion, and intereference. As a result, the carrier signals typically have a much higher frequency than the information signal which allows the carrier signal to travel longer distances with less attenuation as compared to the original signal.
-  •	**Wireless Communication:** Modulating a signal allows us to tranmit signals over long distances wirelesly. Earlier, wires were drawn across large parts of the continent, but it was not possible to make them available everywhere. Modulating allows us to provide services to remote locations quickly and also saves the cost of drawing a dedicated wire to that place.
-  •	 **Reduction in the Height of the Antenna:** For transmitting data, the height of the antenna is usually proportional to the wavelength of the signal. One cannot install an antenna for low frequency signals(signals with larger wavelengths) because the height would be too big. As a result, modulating these signals on high frequency signals allows one to reduce the size of the antenna.
-  •	**Multiplexing is Possible:** Modulation allows two or more signals to be transmitted at the same over the same link through the process of modulation. As a result, signals of the same frequency range can be sent without getting them mixed with each other.
+  * **Efficient Data Transmission:** Transmitting a signal over a link often results in significant signal degradation due to attentuation, distortion, and intereference. As a result, the carrier signals typically have a much higher frequency than the information signal which allows the carrier signal to travel longer distances with less attenuation as compared to the original signal.
+  *	**Wireless Communication:** Modulating a signal allows us to tranmit signals over long distances wirelesly. Earlier, wires were drawn across large parts of the continent, but it was not possible to make them available everywhere. Modulating allows us to provide services to remote locations quickly and also saves the cost of drawing a dedicated wire to that place.
+  *	 **Reduction in the Height of the Antenna:** For transmitting data, the height of the antenna is usually proportional to the wavelength of the signal. One cannot install an antenna for low frequency signals(signals with larger wavelengths) because the height would be too big. As a result, modulating these signals on high frequency signals allows one to reduce the size of the antenna.
+  *	**Multiplexing is Possible:** Modulation allows two or more signals to be transmitted at the same over the same link through the process of modulation. As a result, signals of the same frequency range can be sent without getting them mixed with each other.
 
 ### Description
 OOK (On-Off Keying) modulation is a type of digital modulation where the presence or absence of a carrier wave represents digital data. In OOK modulation, the carrier signal is turned on and off to encode binary data. When the carrier is on, it represents one binary state (often '1'), and when it's off, it represents the other binary state (often '0'). 
