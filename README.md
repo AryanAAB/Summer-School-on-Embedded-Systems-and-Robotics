@@ -41,7 +41,9 @@ The ratio of voltage V applied across a substance or device to the current throu
 
 ### Factors Affecting Resistance
 **Physical Dimensions:** The resistance (R) of a resistor is directly proportional to its length (𝐿) and inversely proportional to its cross-sectional area (𝐴). The relationship is given by: R=ρ L/A
+
 **Material Properties:** The resistivity (ρ) of the material from which the resistor is made significantly influences its resistance (R). Different materials have different resistivities, affecting their suitability for various applications.
+
 **Temperature:** Most materials exhibit a change in resistance (ΔR) with change in temperature (ΔT). The relationship is described by the temperature coefficient of resistance (α), where: ΔR=R_0 αΔT
 
 ### Material's that Behave Differently
@@ -52,13 +54,16 @@ While most materials follow Ohm’s Law and the above conditions under normal co
 
 ### Experiement: Investigation of Ohm’s Law with Various Resistors
 **Objective:** The objective of this experiment is to investigate Ohm’s Law by measuring the relationship between current (I) and resistance (R) when connected to a fixed voltage source of 5V. 
+
 **Hypothesis:** Increasing the resistance of the resistor will result in a decrease in the current flowing through it when voltage is kept constant, because the higher resistance values would impede the flow of current. 
+
 **Materials:**
   *	Various resistors of different resistance values
   *	DC power supply suppy such as a battery
   *	Connecting Wires
   *	Multimeter to measure voltage, current, and resistance
   *	Breadboard
+
 **Procedure:**
   1.	Connect the DC power supply to the breadboard.
   2.	Chose a resistor and measure its resistance using a Ohmeter or Multimeter.
@@ -67,12 +72,15 @@ While most materials follow Ohm’s Law and the above conditions under normal co
   5.	Record the voltage and the current through each resistor.
   6.	Repeat for the other resistance values.
   7.	Plot the graph of current (I) versus resistance (R) for each resistor.
+
 **Precautions:**
   1.	Handle the power supply and the electrical connections with care to avoid electric shock.
   2.	Ensure the connections are secure to prevent short circuits and overheating of components.
   3.	Do not exceed the maximum rated voltage and current of the resistors and other components. 
+
 **Analysis:**
 analysis of the chart depicting the relationship between current (I) and the reciprocal of resistance (1/R) reveals a linear trend, as evidenced by the straight line of best fit. This linear relationship supports Ohm's Law, which states that the current flowing through a resistor is directly proportional to the inverse of its resistance when subjected to a constant voltage. The slope of the line represents the voltage connected across the resistor. Additionally, the y-intercept of the line provides insight into the current that would flow through the circuit if the resistance became very high. In practical terms, this intercept means that as resistance increases, the current through the resistor decreases which is in accordance to Ohm’s Law.
+
 **Conclusion:**
 Through the experiment, it is evident that the current through a resistor, denoted as I(R), is inversely proportional to the resistor value, R, when the resistor is connected across a voltage source, V, in a practical setting. By measuring the voltage and current across different resistors connected to a fixed 9 V battery, we observed a consistent linear trend between current and the reciprocal of resistance as predicted by Ohm’s Law.
 
