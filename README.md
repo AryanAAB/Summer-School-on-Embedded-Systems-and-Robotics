@@ -1,4 +1,4 @@
-#Square Wave Generator
+# Square Wave Generator
 
-##Description
+## Description
 SquareWaveGenerator.py generates a square wave with user-defined amplitude, frequency, and samples per second. These parameters dictate the characteristics of the square wave to be generated. Once the user provides these values, the code uses the “NumPy” library to create a square wave signal using the Fourier Series. It computes the time value corresponding to each sample point based on the specified samples per second. As a result, it is important the sampling frequency is large enough to capture the essence of the square wave. Then, using these time values, it generates the square wave and plots it using “Matplotlib”. Finally, the time and amplitude data are stored in “square_wave_data.csv” file using the “CSV” module. This way, users can visualize and utilize the generated square waves according to their requirements.
