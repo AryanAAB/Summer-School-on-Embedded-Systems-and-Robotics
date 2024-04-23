@@ -5,6 +5,36 @@
 ### Description
 SquareWaveGenerator.py generates a square wave with user-defined amplitude, frequency, and samples per second. These parameters dictate the characteristics of the square wave to be generated. Once the user provides these values, the code uses the “NumPy” library to create a square wave signal using the Fourier Series. It computes the time value corresponding to each sample point based on the specified samples per second. As a result, it is important the sampling frequency is large enough to capture the essence of the square wave. Then, using these time values, it generates the square wave and plots it using “Matplotlib”. Finally, the time and amplitude data are stored in “square_wave_data.csv” file using the “CSV” module. This way, users can visualize and utilize the generated square waves according to their requirements.
 
+### Snippets of Important Sections
+```python
+def generateSquareWave(amplitude: float, frequency: float, sampling_rate: float, duration=1.0):
+    """
+    Generates a square wave based on the given amplitude, frequency, sampling rate, and duration.
+    
+    Parameters:
+    amplitude (float): The amplitude of the square wave.
+    frequency (float): The frequency of the square wave.
+    sampling_rate (float): The sampling rate of the square wave.
+    duration (float, optional): The duration of the square wave in seconds. Defaults to 1.0.
+    
+    Returns:
+    tuple: A tuple containing the time array and the square wave array.
+    """
+    # Calculate the time array
+    t = np.linspace(0, duration, int(sampling_rate * duration), endpoint=False)
+    
+    # Initialize square wave array
+    square_wave = np.zeros_like(t)
+    
+    # Generate square wave by summing sine waves
+    for n in range(1, 10000):  # We sum up to the 10,000th harmonic for a good approximation
+        square_wave += (4 / (2*n - 1) / np.pi) * np.sin(2 * np.pi * (2*n - 1) * frequency * t)
+    
+    square_wave *= amplitude  # Normalize amplitude
+    
+    return t, square_wave
+```
+
 ### Running the Code
 python3 SquareWaveGenerator.py
 
